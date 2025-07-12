@@ -3,7 +3,7 @@
     font-family: 'Inter';
     src: url(./Inter-Variable.woff2) format('woff2 supports variations');
     src: url(./Inter-Variable.woff2) format('woff2-variations');
-    font-weight: 400 700; /* Диапазон весов */
+    font-weight: 400 785; /* Диапазон весов */
     font-display: swap;
 }
 
