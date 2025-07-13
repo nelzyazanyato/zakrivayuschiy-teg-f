@@ -19,36 +19,37 @@
       <h1 class="header_text">закрывающий тег</h1>
     </header>
     <main class="block-size content">
-      <ul class="card-list">
-        <li class="card">
+      <div class="card-list">
+        <div class="card">
           <h2 class="card-title">
             Фритрек и нулевой спринт: Подготовка к работе
           </h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">my way</span>
             <img
               src="./images/0-sprint.jpg"
               alt="фотография пути, который освещает солнце"
-              class="card-image card-image-sun"
+              class="card-image vintage-filter"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               Это было самое начало пути. На этом этапе важно было проникнуться
               основами и настроиться на учёбу. И, возможно, подумать, как новые
               знания могут повлиять на ваше будущее.
             </p>
             <p>Нашла то, от чего горят глаза. Вперёд, к профессии мечты!</p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -74,23 +75,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">1 спринт: Я — чистый лист</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">Self-doubt</span>
             <img
               src="./images/1-sprint-start.jpg"
               alt="изображение формы, сделанной из бумаги, олицетворяющей мозг"
-              class="card-image card-image-mind"
+              class="card-image saturate-90-hue-rotate-neg11"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               На первых этапах мы работали со страхами и сомнениями, которые
               часто испытывают новички. Один из них — страх перед чистым листом.
@@ -101,15 +102,16 @@
             <p>
               Сильная радость и интерес сменяются тревогой, что не получится.
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -135,38 +137,39 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">1 спринт: А если не получится?</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">I made it!</span>
             <img
               src="./images/1-sprint-done.jpg"
               alt="фотография с бегущей собакой по траве"
-              class="card-image card-image-dog"
+              class="card-image high-saturation"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               Первый проект — позади! Но это всё ещё самое начало пути. Радость
               могла быстро померкнуть и смениться ожиданием провала. Или вы,
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
             <p>Я в шоке, что смогла!</p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -192,23 +195,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">It’s starting to click</span>
             <img
               src="./images/2-sprint-start.jpg"
               alt="изображение части лестницы"
-              class="card-image card-image-step"
+              class="card-image soft-blur"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               На этом этапе вы уже достаточно разбирались в основах вёрстки,
               чтобы понять, как много ещё впереди. Вы могли попытаться погнаться
@@ -220,15 +223,16 @@
               Столько всего интересного! Быстрее бы пройти теорию, чтобы успеть
               сдать.
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -254,23 +258,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">Don’t stop coding!</span>
             <img
               src="./images/2-sprint-done.jpg"
               alt="фотография вида окна из поезда"
-              class="card-image card-image-train"
+              class="card-image saturate-150"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               Всё это время вы были не одиноки (хотя, возможно, иногда и
               чувствовали, что одни против целого мира). Вас окружали
@@ -283,15 +287,16 @@
               Влетела в последний вагон с проектной работой. Ревьюеры
               замечательные!
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -317,23 +322,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">3 спринт: Обходные стратегии</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">These damn variables...</span>
             <img
               src="./images/3-sprint-start.jpg"
               alt="фото ткани с надписью 'breath'"
-              class="card-image card-image-breathe"
+              class="card-image hue-rotate-28"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               На этом курсе вы постоянно решали разные задачи. В какой-то момент
               вам могло показаться, что решения просто иссякли. Значит, пришло
@@ -343,15 +348,16 @@
               Устала писать эти переменные в заданиях! Сколько же новой
               информации.
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -377,23 +383,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">Healing from burnout</span>
             <img
               src="./images/3-sprint-done.jpg"
               alt="изображение с самолетом в облаках"
-              class="card-image card-image-plane"
+              class="card-image hue-rotate-30"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               Во время учёбы часто возникает чувство, когда не знаешь, за что
               хвататься. Вроде и проектную пора сдавать, и задачи хочется
@@ -405,13 +411,14 @@
               Столько самостоятельности, опускаются руки. Спасибо возможности
               перевестись в другую когорту.
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                 aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -437,23 +444,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-        <li class="card">
+        </div>
+        <div class="card">
           <h2 class="card-title">«Сейчас я здесь»</h2>
-          <div class="card_content">
+          <figure class="card_content">
             <span class="label">Easy-breezy</span
             ><img
               src="./images/4-sprint.jpg"
               alt="фотография собаки в очках за компьютером"
-              class="card-image card-image-tablet"
+              class="card-image brightness-65-saturate-130"
               loading="lazy"
             />
-          </div>
-          <article class="card-text">
+          </figure>
+          <div class="card-text">
             <p>
               Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
               Во-первых, впереди ещё много материала про «красотищу». Во-вторых,
@@ -466,15 +473,16 @@
               Очень рада, что спустя столько спринтов, многое запомнила.
               Казалось запомнить невозможно. Осталась красотища!
             </p>
-          </article>
+          </div>
           <div class="card-buttons-container">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 class="like-icon"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -500,16 +508,16 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
-        </li>
-      </ul>
+        </div>
+        </div>
     </main>
-    <footer class="footer">
+    <div class="save-controls">
       <button
-        class="save__button"
+        class="save__button button"
         type="button"
         onclick="window['saveBtn'].showModal();"
         aria-controls="saveBtn"
@@ -522,8 +530,9 @@
         >
           <use href="./svg/floopy.svg#floopy"></use>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <p class="button__text">Сохранить на память</p>
       </button>
+    </main>
       <dialog id="saveBtn" class="modal">
         <div class="floopy__modal">
           <svg
@@ -534,16 +543,16 @@
             <use href="./svg/floopy.svg#floopy"></use>
           </svg>
         </div>
-        <span class="insert-diskette">Вставьте дискету, чтобы продолжить</span>
-        <button
-          class="button__modal"
+        <p class="insert-diskette">Вставьте дискету, чтобы продолжить</p>
+        <button 
+          class="button__modal button"
           type="button"
           onclick="window['saveBtn'].close()"
         >
           <span class="button__ok">ок</span>
         </button>
       </dialog>
-    </footer>
+    </div>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

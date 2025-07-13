@@ -30,7 +30,7 @@
 .header {
   background-color: var(--bg-color);
   display: flex;
-  block-size: clamp(325px, 80vw, 368px);
+  padding-block: var(--padding-block);
   flex-direction: column;
   align-items: center;
   align-self: center;
@@ -49,7 +49,7 @@
 }
 
 .header_text {
-  font-variation-settings: "wght" var(--text-p-weight);
+  font-weight: var(--text-p-weight);
   font-size: clamp(0.875rem, -1.7617rem + 11.25vw, 1.4375rem);
   line-height: 100%;
   text-transform: uppercase;
@@ -96,17 +96,20 @@
   outline: var(--border);
 }
 
-.card__like-button {
+.button {
   position: relative;
   background-color: var(--bg-color);
   border: var(--border);
+  display: flex;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button {
   padding: 10px 0;
   inline-size: 130px;
-  display: flex;
   justify-content: center;
   align-items: center;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .sparks {
@@ -151,9 +154,6 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon:active .contour {
-  fill: var(--counter-color);
-}
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
@@ -171,25 +171,19 @@
 }
 
 .like-icon.is-liked {
-  animation: heartScale 0.3s ease-in 0.1s 1 forwards;
+  animation: scaleHeart 0.3s ease-in 0.1s 1 ;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparksHeart 0.3s ease-in 0.3s 1 forwards;
+  animation: sparksHeart 0.3s ease-in 0.3s 1 ;
 }
 
 .save__button {
-  position: relative;
-  background-color:var(--bg-color);
   padding-block: 15px;
   padding-inline: 20px;
-  border: var(--border);
-  display: flex;
   align-items: center;
   gap: 8px;
   flex-direction: row;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .button__text {
@@ -213,52 +207,57 @@
   color: var(--bg-color);
 }
 
+.card_content {
+  margin: 0;
+}
+
 .card-image {
   inline-size: 100%;
   block-size: clamp(375px, 80vw, 696px);
   object-fit: cover;
+  object-position: center;
   border-top: var(--border);
   border-bottom: var(--border);
 }
 
 /*фильтр для картинки с карточки 0 спринт*/
-.card-image-sun {
+.vintage-filter {
   filter: sepia(30%) contrast(1.2) saturate(110%);
 }
 
 /*фильтер для картинки с карточки начало 1 спринта*/
-.card-image-mind {
+.saturate-90-hue-rotate-neg11 {
   filter: saturate(90%) hue-rotate(-11deg);
 }
 
 /*фильтер для картинки с карточки конец 1 спринта*/
-.card-image-dog {
+.high-saturation {
   filter: saturate(130%);
 }
 
 /*фильтер для картинки с карточки начало 2 спринта*/
-.card-image-step {
+.soft-blur {
   filter: blur(3px);
 }
 
 /*фильтер для картинки с карточки конец 2 спринта*/
-.card-image-train {
+.saturate-150 {
   filter: saturate(150%);
 }
 
 /*фильтер для картинки с карточки начало 3 спринта*/
-.card-image-breathe {
+.hue-rotate-28 {
   filter: hue-rotate(28deg);
 }
 
 /*фильтер для картинки с карточки конец 3 спринта*/
-.card-image-plane {
+.hue-rotate-30 {
   filter: hue-rotate(30deg);
 }
 
 /*фильтер для картинки с карточки "Сейчас я здесь"*/
 
-.card-image-tablet {
+.brightness-65-saturate-130 {
   filter: brightness(65%) saturate(130%);
 }
 
@@ -271,7 +270,7 @@
   font-family: var(--accent-font);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  font-size:var(--font-14);
+  font-size: 0.875rem;
   z-index: 1;
   text-transform: uppercase;
   letter-spacing: 0%;
@@ -307,11 +306,11 @@
   flex-direction: column;
   gap: 27px;
   font-size: 1.125rem;
-  line-height: 21px;
+  line-height: 1.3125em;
   padding: 25px;
 }
 
-.footer {
+.save-controls {
   margin-block-end: var(--margin-block);
   margin-block-start: 52px;
 }
@@ -335,20 +334,14 @@ dialog:open {
 }
 
 .button__modal {
-  position: relative;
-  background-color: var(--text-stroke-color);
-  border: var(--border);
   font-family: var(--accent-font);
   text-transform: uppercase;
-  font-size:var(--font-14);
+  font-size: 0.875rem;
   line-height: 90%;
-  display: flex;
   justify-content: center;
   padding-block: 10px;
   width: 100%;
   grid-column: 1 / span 2;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 .button__ok {
@@ -356,12 +349,16 @@ dialog:open {
   z-index: 2;
   mix-blend-mode: difference; /* для анимации*/
   color: var(--bg-color);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 90%;
 }
 
 .insert-diskette {
   font-family: var(--accent-font);
   font-weight: var(--text-p-weight);
-  font-size:var(--font-14);
+  font-size: 0.875rem;
   line-height: 150%;
   text-transform: uppercase;
   width: 100%;
@@ -372,16 +369,14 @@ dialog:open {
   opacity: 0.75;
 }
 
-.button__modal:focus, /* для анимации*/
-.save__button:focus,
-.card__like-button:focus {
+.button:focus  /* для анимации*/
+{
   outline: none;
   box-shadow: 2px 2px 0 var(--text-color);
 }
 
-.button__modal::before, /* для анимации*/
-.save__button::before,
-.card__like-button::before {
+.button::before /* для анимации*/
+{
   position: absolute;
   content: "";
   transform: scaleX(0);
@@ -394,13 +389,17 @@ dialog:open {
   background-color: var(--text-color);
 }
 
-.button__modal:hover::before, /* для анимации*/
-.save__button:hover::before,
-.card__like-button:hover::before {
+
+.button:hover::before /* для анимации*/
+ {
   transform: scaleX(1);
 }
 
 @media (width <=375px) {
+  .header {
+    --padding-block: 120px;
+  }
+
   .save__button {
     flex-direction: column;
   }
