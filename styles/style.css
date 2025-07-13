@@ -207,6 +207,7 @@
 }
 
 .card_content {
+  position: relative;
   margin: 0;
 }
 
@@ -260,9 +261,6 @@
   filter: brightness(65%) saturate(130%);
 }
 
-.card_content {
-  position: relative;
-}
 .label {
   position: absolute;
   color: var(--text-color);
@@ -312,6 +310,8 @@
 .save-controls {
   margin-block-end: var(--margin-block);
   margin-block-start: 52px;
+  display: flex;
+  justify-content: center;
 }
 
 .floopy__modal {
